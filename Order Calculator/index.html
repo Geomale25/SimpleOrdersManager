@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="el" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Υπολογισμός προϊόντων</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    
+</head>
+<body>
+
+<h1>Υπολογισμός προϊόντων</h1>
+
+<div>
+    <label for="productName">Όνομα Προϊόντος:</label>
+    <input type="text" id="productName">
+    
+    <label for="quantity">Ποσότητα:</label>
+    <input type="number" id="quantity" min="1" value="">
+    
+    <label for="price">Τιμή:</label>
+    <input type="number" id="price" min="0.01" step="0.01" value="">
+    
+    <button onclick="addProduct()">Προσθήκη Προϊόντος</button>
+</div>
+
+<div>
+    <h2>Λίστα Προϊόντων</h2>
+    <ul id="productList" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+</div>
+
+<div>
+    <h2>Συνολική Τιμή</h2>
+    <p id="totalPrice">Σύνολο: €0.00</p>
+</div>
+<script src="./script.js"></script>
+
+
+</body>
+</html>
